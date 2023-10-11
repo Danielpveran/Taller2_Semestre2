@@ -1,51 +1,50 @@
 #include <stdio.h>
 
-int main(){
-	
-	int Opcion,Saldo=1000;
-	float Agregar;
-	
-		printf ("\tBienvanido a su Cajero");//el \t deja espacios
-		printf("\n1.Ingreso en la cuenta");
-		printf("\n2.Retirar");
-		printf("\n3.Salir");
-		printf("\n3.Ver saldo actual");
-		scanf("%i",&opcion);
-		 
-		 switch(opcion){
-		 	
-		 	case 1: //agregar a cuenta
-		 	}
-			 	printf("\nCuanto desea ingresar en cuenta?.");
-			 	scanf("%f",&Agregar);
-			 	saldo += agregar;
-			 	printf("Su saldo total es de: %.2f",saldo);
-		 	break;
-		 	
-		 	case 2:
-		 		printf("Cuanto desea retirar?")
-		 		scanf("%f"&Retirar);
-		 	 
-		 	 	if (Retirar > Saldo){
-		 	 	printf("Saldo Insuficiente ",saldo);
-		 	 	}
-		 	 	
-		 	 	else{
-		 	 		saldo -= retirar;
-		 	 		printf("El saldo disponible es de: %.2f",Saldo)
-		 	 	}
-		 		
-		 	case 3:
-		 		break;
-		 	break
-		 	
-		 	case 4;
-		 	 printf("Su saldo total es de: %f",saldo)
-		 	break;
-		 	
-			default: //// este Código se ejecuta si ninguno de los casos anteriores coincide con expresion siendo similar al else
-		 }
-		
-	
-	return 0;
+int main() {
+    int Opcion, Saldo = 1000;
+    float Agregar, Retirar;
+
+    while (1) {
+        printf("\nBienvenido a su Cajero\n");
+        printf("1. Ingreso en la cuenta\n");
+        printf("2. Retirar\n");
+        printf("3. Salir\n");
+        printf("4. Ver Saldo actual\n");
+        scanf("%i", &Opcion);
+
+        switch (Opcion) {
+            case 1:
+                printf("\nCuánto desea ingresar en cuenta? ");
+                scanf("%f", &Agregar);
+                Saldo += Agregar;
+                printf("Su Saldo total es de: %.2f\n", Saldo);
+                break;
+
+            case 2:
+                printf("Cuánto desea retirar? ");
+                scanf("%f", &Retirar);
+
+                if (Retirar > Saldo) {
+                    printf("Saldo Insuficiente. Su saldo actual es de: %.2f\n", Saldo);
+                } else {
+                    Saldo -= Retirar;
+                    printf("El Saldo disponible es de: %.2f\n", Saldo);
+                }
+                break;
+
+            case 3:
+                // Salir del programa
+                return 0;
+
+            case 4:
+                printf("Su Saldo total es de: %.2f\n", Saldo);
+                break;
+
+            default:
+                printf("Ingrese una opción válida\n");
+                break;
+        }
+    }
+
+    return 0;
 }
