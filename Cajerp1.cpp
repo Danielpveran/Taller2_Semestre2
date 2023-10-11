@@ -26,17 +26,21 @@ int main(){
 		 		printf("Cuanto desea retirar?")
 		 		scanf("%f"&Retirar);
 		 	 
-		 	 if (Retirar > Saldo){
-		 	 printf("Saldo Insuficiente ",saldo);
-		 	 }
+		 	 	if (Retirar > Saldo){
+		 	 	printf("Saldo Insuficiente ",saldo);
+		 	 	}
+		 	 	
+		 	 	else{
+		 	 		saldo -= retirar;
+		 	 		printf("El saldo disponible es de: %.2f",Saldo)
+		 	 	}
 		 		
 		 	case 3:
-		 		
+		 		break;
 		 	break
 		 	
 		 	case 4;
 		 	 printf("Su saldo total es de: %f",saldo)
-		 	 
 		 	break;
 		 	
 			default: //// este Código se ejecuta si ninguno de los casos anteriores coincide con expresion siendo similar al else
