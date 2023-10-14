@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#define Card_Number "1234567890"
+#define Card_Number_Preset "1234567890"
 
-#define KeyWord "9485"
+#define KeyWord_Preset "9485"
 
 
 int main()
@@ -22,13 +22,19 @@ int main()
 		printf("\n Password:");
 		scanf("%s",KeyWord);
 		
-		if (strcmp(usuario, USUARIO) == 0 && strcmp(contrasena, CONTRASENA) == 0)
+		if (strcmp(Card_Number, Card_Number_Preset) == 0 && strcmp(KeyWord, KeyWord_Preset) == 0)
 		 {
-        printf("correcto\n", usuario);
+        printf("correcto\n", Card_Number);
+        
 		}
 	 else {
-	 	printf("User/password its wrong please try again\n", usuario);
-        c+1;
+	 	printf("User/password its wrong please try again\n", Card_Number);
+        c++;
+    	}
+    
+    if (c > 3){
+    	printf("You have reached the limit of attempts, the account number will be blocked for your safety.\n");
+    	
     	}
 	}
 	return 0;
